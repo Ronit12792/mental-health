@@ -1,0 +1,146 @@
+/* Custom styles to enhance Tailwind */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Chat messages */
+.chat-message {
+  margin-bottom: 1rem;
+  animation: fadeInUp 0.3s ease-out;
+}
+
+.message-bubble {
+  max-width: 80%;
+  padding: 0.75rem 1rem;
+  border-radius: 1rem;
+  position: relative;
+  word-wrap: break-word;
+}
+
+.user-message .message-bubble {
+  background-color: #7c3aed;
+  color: white;
+  margin-left: auto;
+  border-bottom-right-radius: 0.25rem;
+}
+
+.bot-message .message-bubble {
+  background-color: #f3f4f6;
+  color: #1f2937;
+  margin-right: auto;
+  border-bottom-left-radius: 0.25rem;
+}
+
+/* Mood buttons */
+.mood-btn {
+  transition: all 0.2s ease;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  width: 20%;
+}
+
+.mood-btn:hover {
+  transform: translateY(-2px);
+}
+
+/* Tool buttons */
+.tool-btn {
+  transition: all 0.2s ease;
+}
+
+.tool-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* Quick response buttons */
+.quick-response-btn {
+  transition: all 0.2s ease;
+}
+
+.quick-response-btn:hover {
+  transform: translateY(-1px);
+}
+
+/* Breathing circle animation */
+.breathing-circle-active {
+  animation: pulse 4s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    background-color: #93c5fd;
+  }
+  50% {
+    transform: scale(1.1);
+    background-color: #60a5fa;
+  }
+  100% {
+    transform: scale(1);
+    background-color: #93c5fd;
+  }
+}
+
+/* Custom animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #c4b5fd;
+  border-radius: 10px;
+}
+
+/* Dark mode styles */
+.dark {
+  background: #111827;
+  color: #f3f4f6;
+}
+
+.dark nav {
+  background-color: #1f2937;
+  color: white;
+}
+
+.dark .bg-white {
+  background-color: #1f2937;
+  color: #f3f4f6;
+}
+
+.dark .message-bubble {
+  background-color: #374151;
+  color: #f3f4f6;
+}
+
+.dark .bg-gray-50 {
+  background-color: #111827;
+}
+
+.dark .text-gray-800 {
+  color: #f3f4f6;
+}
